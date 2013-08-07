@@ -1,0 +1,56 @@
+NAME
+    Wight::Chart::Google - Save google charts to images using phantomjs
+
+VERSION
+    version 0.001
+
+SYNOPSIS
+      use Wight::Chart::Google;
+
+      my $chart = Wight::Chart::Google->new(
+        type => "area",
+        width => 900,
+        height => 500,
+        options => {
+          backgroundColor => 'transparent',
+          hAxis => { gridlines => { color => "#fff" } },
+          vAxis => { gridlines => { color => "#fff" } },
+          legend => { position => 'none' },
+        }
+      );
+      $chart->columns([
+        { name => 'Day', type => 'string' },
+        { name => 'Amount', type => 'number' },
+      ]);
+      $chart->rows([['1st',100], ['2nd',150], ['3rd',50], ['4th',70]]);
+      $chart->render();
+
+NAME
+    Wight::Chart::Google - Generate static google charts
+
+    This is pre-release software, everything could change and there are
+    definitely bugs.
+
+SUPPORT
+  Bugs / Feature Requests
+    Please report any bugs or feature requests through the issue tracker at
+    <https://github.com/papercreatures/wight-chart-google/issues>. You will
+    be notified automatically of any progress on your issue.
+
+  Source Code
+    This is open source software. The code repository is available for
+    public review and contribution under the terms of the license.
+
+    <https://github.com/papercreatures/wight-chart-google>
+
+      git clone git://github.com/papercreatures/wight-chart-google.git
+
+AUTHOR
+    Simon Elliott <simon@papercreatures.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Simon Elliott.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+

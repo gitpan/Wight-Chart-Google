@@ -1,0 +1,87 @@
+{
+   "abstract" : "Save google charts to images using phantomjs",
+   "author" : [
+      "Simon Elliott <simon@papercreatures.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.131560",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Wight-Chart-Google",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "examples",
+         "corpus"
+      ],
+      "package" : [
+         "DB"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.30",
+            "File::ShareDir::Install" : "0.03"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Pod::Coverage::TrustPod" : "0",
+            "Test::CPAN::Meta" : "0",
+            "Test::Pod" : "1.41",
+            "Test::Pod::Coverage" : "1.08"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Cwd" : "0",
+            "File::Share" : "0",
+            "JSON::XS" : "0",
+            "Moo" : "0",
+            "Template::Tiny" : "0",
+            "Wight" : "0",
+            "perl" : "5.006",
+            "strictures" : "1"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0",
+            "File::Find" : "0",
+            "File::Spec::Functions" : "0",
+            "File::Temp" : "0",
+            "List::Util" : "0",
+            "Test::More" : "0",
+            "strict" : "0",
+            "warnings" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "Wight::Chart::Google" : {
+         "file" : "lib/Wight/Chart/Google.pm",
+         "version" : "0.001"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/papercreatures/wight-chart-google/issues"
+      },
+      "homepage" : "https://metacpan.org/release/Wight-Chart-Google",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/papercreatures/wight-chart-google.git",
+         "web" : "https://github.com/papercreatures/wight-chart-google"
+      }
+   },
+   "version" : "0.001"
+}
+

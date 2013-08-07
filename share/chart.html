@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+  </head>
+  <body>
+    <div id="chart_div"></div>
+  </body>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+
+
+      function drawChart(opts) {
+        var size = "width: " + (opts.options.chartArea.width + 100) + "px; height:" + (opts.options.chartArea.height + 50) + "px;";
+        document.getElementById('chart_div').setAttribute("style", size);
+
+        var data = new google.visualization.DataTable();
+        opts.columns.forEach(function(col) {
+          data.addColumn(col.type, col.name);
+        });
+
+        data.addRows(opts.rows);
+
+        var chart = new google.visualization[opts.type](
+          document.getElementById('chart_div'));
+        chart.draw(data, opts.options);
+      }
+    </script>
+</html>
