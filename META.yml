@@ -3,19 +3,20 @@ abstract: 'Save google charts to images using phantomjs'
 author:
   - 'Simon Elliott <simon@papercreatures.com>'
 build_requires:
+  Capture::Tiny: 0
   ExtUtils::MakeMaker: 0
-  File::Find: 0
   File::Spec::Functions: 0
   File::Temp: 0
   List::Util: 0
-  Test::More: 0
+  Test::More: 0.88
+  blib: 0
   strict: 0
   warnings: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
   File::ShareDir::Install: 0.03
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.131560'
+generated_by: 'Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -32,13 +33,13 @@ no_index:
 provides:
   Wight::Chart::Google:
     file: lib/Wight/Chart/Google.pm
-    version: 0.001
+    version: 0.002
 requires:
   Cwd: 0
+  Encode: 0
   File::Share: 0
   JSON::XS: 0
   Moo: 0
-  Template::Tiny: 0
   Wight: 0
   perl: 5.006
   strictures: 1
@@ -46,4 +47,5 @@ resources:
   bugtracker: https://github.com/papercreatures/wight-chart-google/issues
   homepage: https://metacpan.org/release/Wight-Chart-Google
   repository: git://github.com/papercreatures/wight-chart-google.git
-version: 0.001
+version: 0.002
+x_authority: cpan:DAGOLDEN

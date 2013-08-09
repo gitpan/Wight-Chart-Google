@@ -24,24 +24,25 @@ my %WriteMakefileArgs = (
   "NAME" => "Wight::Chart::Google",
   "PREREQ_PM" => {
     "Cwd" => 0,
+    "Encode" => 0,
     "File::Share" => 0,
     "JSON::XS" => 0,
     "Moo" => 0,
-    "Template::Tiny" => 0,
     "Wight" => 0,
     "strictures" => 1
   },
   "TEST_REQUIRES" => {
+    "Capture::Tiny" => 0,
     "ExtUtils::MakeMaker" => 0,
-    "File::Find" => 0,
     "File::Spec::Functions" => 0,
     "File::Temp" => 0,
     "List::Util" => 0,
-    "Test::More" => 0,
+    "Test::More" => "0.88",
+    "blib" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.001",
+  "VERSION" => "0.002",
   "test" => {
     "TESTS" => "t/*.t"
   }

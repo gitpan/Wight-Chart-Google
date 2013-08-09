@@ -1,4 +1,5 @@
 use Test::More;
+use Encode;
 
 BEGIN { use_ok( 'Wight::Chart::Google' ); }
 
@@ -9,7 +10,7 @@ my $chart = Wight::Chart::Google->new(
   options => {
     backgroundColor => 'transparent',
     hAxis => { gridlines => { color => "#fff" } },
-    vAxis => { gridlines => { color => "#fff" } },
+    vAxis => { format => decode_utf8("£#"), gridlines => { color => "#fff" } },
     legend => { position => 'none' },
   }
 );

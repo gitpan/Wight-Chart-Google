@@ -2,7 +2,7 @@ NAME
     Wight::Chart::Google - Save google charts to images using phantomjs
 
 VERSION
-    version 0.001
+    version 0.002
 
 SYNOPSIS
       use Wight::Chart::Google;

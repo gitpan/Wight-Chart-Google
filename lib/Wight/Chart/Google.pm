@@ -2,14 +2,12 @@ package Wight::Chart::Google;
 
 #ABSTRACT: Save google charts to images using phantomjs
 
-our $VERSION = '0.001'; # VERSION
-#
-# 
+our $VERSION = '0.002'; # VERSION
 
 use strictures 1;
 use Moo;
-use Template::Tiny;
 use Wight;
+use Encode;
 use File::Share qw/dist_file/;
 use Cwd;
 use JSON::XS;
@@ -57,12 +55,12 @@ sub render {
     %{$self->options}
   };
 
-  my $args = encode_json({
+  my $args = decode_utf8(encode_json({
     options => $options,
     type => $types->{$self->type},
     rows => $self->rows,
     columns => $self->columns,
-  });
+  }));
   #warn $args;
   $w->evaluate("drawChart($args)");
   $w->render($self->output);
@@ -83,7 +81,7 @@ Wight::Chart::Google - Save google charts to images using phantomjs
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 

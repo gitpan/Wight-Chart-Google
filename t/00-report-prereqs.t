@@ -10,9 +10,10 @@ use File::Spec::Functions;
 use List::Util qw/max/;
 
 my @modules = qw(
+  Capture::Tiny
   Cwd
+  Encode
   ExtUtils::MakeMaker
-  File::Find
   File::Share
   File::ShareDir::Install
   File::Spec::Functions
@@ -20,9 +21,9 @@ my @modules = qw(
   JSON::XS
   List::Util
   Moo
-  Template::Tiny
   Test::More
   Wight
+  blib
   perl
   strict
   strictures
